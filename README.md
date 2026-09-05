@@ -1,10 +1,10 @@
 ﻿# AI-Risk-Analyzer
-# 🛡️ Sentinel AI: E-Commerce Return Abuse Detection 
+#Sentinel AI: E-Commerce Return Abuse Detection 
 Sentinel AI is a high-precision risk engine designed to detect and prevent "Return Abuse" (wardrobing, fee avoidance, and burner account fraud) in real-time. Unlike traditional fraud systems, Sentinel AI provides an **Explainable Audit Trail** for every decision, allowing merchants to balance safety with customer trust.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **XGBoost Risk Engine**: A high-performance gradient boosting model trained on 10,000+ transaction patterns.
 - **Explainable AI (SHAP)**: Every "Flagged" transaction comes with a visual Audit Trail, showing exactly which behaviors (e.g., shipping mismatch + high return velocity) led to the score.
@@ -14,7 +14,7 @@ Sentinel AI is a high-precision risk engine designed to detect and prevent "Retu
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend/AI**: Python 3.11, XGBoost, Scikit-Learn
 - **Explainability**: SHAP (SHapley Additive exPlanations)
@@ -24,7 +24,7 @@ Sentinel AI is a high-precision risk engine designed to detect and prevent "Retu
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 | Metric | Value | Impact |
 | :--- | :--- | :--- |
@@ -35,7 +35,7 @@ Sentinel AI is a high-precision risk engine designed to detect and prevent "Retu
 
 ---
 
-## 💰 Business Logic & ROI
+## Business Logic & ROI
 
 Sentinel AI is built on a cost-benefit framework:
 1. **The Cost of a Mistake**: Blocking an honest customer costs **₹500** (Support overhead + Lifetime Value loss).
@@ -44,7 +44,7 @@ Sentinel AI is built on a cost-benefit framework:
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone & Setup Environment
 ```bash
