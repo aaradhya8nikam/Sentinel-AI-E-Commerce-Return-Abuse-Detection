@@ -1,0 +1,11 @@
+services:
+  sentinel-ai:
+    build: .
+    container_name: sentinel-ai
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+      - ./reports:/app/reports
+    restart: unless-stopped

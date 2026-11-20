@@ -1,0 +1,36 @@
+name: Sentinel AI CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test-and-train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Generate reproducible dataset
+        run: python generate_data.py --rows 1500 --output data/transactions.csv
+      - name: Run tests
+        run: pytest -q
+      - name: Train model and verify artifacts
+        run: |
+          python -m src.train_model
+          test -s artifacts/return_abuse_model.pkl
+          test -s artifacts/features.pkl
+          test -s artifacts/metrics.json
+      - name: Build Docker image
+        run: docker build -t sentinel-ai:test .
